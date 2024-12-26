@@ -22,10 +22,10 @@ stemmer = stemmer_factory.create_stemmer()
 # Function for preprocessing text
 def preprocess_text(text):
     # Remove mentions, hashtags, extra whitespace
-    text = re.sub(r'@[A-Za-z0-9_]+', '', text)  # Remove mentions
-    text = re.sub(r'#\w+', '', text)  # Remove hashtags
-    text = re.sub(r'[^A-Za-z\s]', '', text)  # Remove non-alphabetic characters
-    text = re.sub(r'\s+', ' ', text).strip()  # Remove extra spaces
+    text = text.lower()  # Mengubah teks menjadi huruf kecil
+    text = re.sub(r'[^a-zA-Z\s]', '', text)  # Menghapus karakter khusus dan angka
+    text = re.sub(r'[^\w\s]', '', text) # Menghapus karakter non-alphanumeric dan whitespace
+    text = re.sub(r'\s+', ' ', text).strip()  # Menghapus whitespace ekstra
 
     # Case folding
     text = text.lower()
