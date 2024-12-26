@@ -46,7 +46,7 @@ st.write("Enter text or upload a CSV file for sentiment analysis (positive or ne
 option = st.radio("Select input :", ("Text", "Upload CSV File"))
 
 #Single Text Input
-if option == "Single Text":
+if option == "Text":
     user_input = st.text_area("Enter Text", placeholder="Type your text here...")
 
     if st.button("Analyze"):
