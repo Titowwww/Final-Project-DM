@@ -43,13 +43,13 @@ st.title("Sentiment Analysis Application")
 st.write("Enter text or upload a CSV file for sentiment analysis (positive or negative).")
 
 # Tab navigation: Single Text Input or File Upload
-option = st.radio("Select input :", ("Single Text", "Upload CSV File"))
+option = st.radio("Select input :", ("Text", "Upload CSV File"))
 
 #Single Text Input
 if option == "Single Text":
     user_input = st.text_area("Enter Text", placeholder="Type your text here...")
 
-    if st.button("Analyze Sentiment"):
+    if st.button("Analyze"):
         if user_input:
             # Preprocess text
             preprocessed_text = preprocess_text(user_input)
