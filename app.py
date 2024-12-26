@@ -36,7 +36,7 @@ def preprocess_text(text):
     return text
 
 #UI
-st.title("Sentiment Analysis Application")
+st.title("📌Sentiment Analysis Application")
 st.write("Enter text or upload a CSV file for sentiment analysis (positive or negative).")
 
 # Tab navigation: Single Text Input or File Upload
