@@ -27,9 +27,6 @@ def preprocess_text(text):
     text = re.sub(r'[^\w\s]', '', text) # Menghapus karakter non-alphanumeric dan whitespace
     text = re.sub(r'\s+', ' ', text).strip()  # Menghapus whitespace ekstra
 
-    # Case folding
-    text = text.lower()
-
     # Remove stopwords
     text = ' '.join([word for word in text.split() if word not in stopwords])
 
