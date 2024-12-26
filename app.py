@@ -43,7 +43,7 @@ st.title("Sentiment Analysis Application")
 st.write("Enter text or upload a CSV file for sentiment analysis (positive or negative).")
 
 # Tab navigation: Single Text Input or File Upload
-option = st.radio("Select input mode:", ("Single Text", "Upload CSV File"))
+option = st.radio("Select input :", ("Single Text", "Upload CSV File"))
 
 #Single Text Input
 if option == "Single Text":
